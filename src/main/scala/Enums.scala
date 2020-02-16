@@ -5,9 +5,3 @@ object A extends Enumeration {
 object B extends Enumeration {
   val B1, B2 = Value
 }
-
-object Enum extends App {
-  def a(input: A.Value): String = input.toString
-
-  println(B.B2)
-}
