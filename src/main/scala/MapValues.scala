@@ -10,7 +10,7 @@ object MapValues extends App {
   val newDistribution = perturbed mapValues {
     _ / sumProbs
   }
-  println(s"${"-" * 20} mapValues ${"-" * 20}")
+  println(s"${"\u2500" * 20} mapValues ${"\u2500" * 40}")
   println(s"thing(0): ${newDistribution.get(thing(0))}, thing(1): ${newDistribution.get(thing(1))}")
   println(s"thing(0): ${newDistribution.get(thing(0))}, thing(1): ${newDistribution.get(thing(1))}")
 
@@ -20,7 +20,7 @@ object MapValues extends App {
   val newDistributionView = perturbedView.mapValues(_ / sumProbsOfView)
 
   println
-  println(s"${"-" * 20} view ${"-" * 20}")
+  println(s"${"\u2500" * 20} view ${"\u2500" * 45}")
 
   println(s"thing(0): ${newDistributionView.get(thing(0))}, thing(1): ${newDistributionView.get(thing(1))}")
   println(s"thing(0): ${newDistributionView.get(thing(0))}, thing(1): ${newDistributionView.get(thing(1))}")
@@ -30,7 +30,7 @@ object MapValues extends App {
   val newDistributionMap = perturbedMap.map{ case (k, v) => k -> (v / sumProbsOfValues)}
 
   println
-  println(s"${"-" * 20} Map ${"-" * 20}")
+  println(s"${"\u2500" * 20} Map ${"\u2500" * 46}")
 
   println(s"thing(0): ${newDistributionMap.get(thing(0))}, thing(1): ${newDistributionMap.get(thing(1))}")
   println(s"thing(0): ${newDistributionMap.get(thing(0))}, thing(1): ${newDistributionMap.get(thing(1))}")
