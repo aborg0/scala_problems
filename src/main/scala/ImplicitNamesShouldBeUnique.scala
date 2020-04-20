@@ -1,6 +1,5 @@
 import java.util.regex.Pattern
 
-import scala.language.implicitConversions
 
 object ImplicitNamesShouldBeUnique {
   trait EscapeSql {
@@ -18,12 +17,12 @@ object ImplicitNamesShouldBeUnique {
 //  import Predef._
 //  import Proper._
   def main(args: Array[String]): Unit = {
-    "".escapeSql
+    val _ = "".escapeSql
   }
 
   object Proper {
     implicit final class EscapeSqlOp(val str: String) extends AnyVal {
-      def escapeSql: String = EscapeSql.simple(str).escapeSql
+      def escapeSql2: String = EscapeSql.simple(str).escapeSql
     }
   }
 }
